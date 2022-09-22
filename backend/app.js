@@ -1,9 +1,9 @@
 const express = require ('express');
 const app = express();
 
-require (process.env.API_URL);
+require ('dotenv/config');
 
-const api = process.env.
+const api = process.env.API_URL;
 app.get(api+'/products', (req, res) => {
   res.send('hello api')
 })
