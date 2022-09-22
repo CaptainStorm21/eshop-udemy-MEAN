@@ -1,9 +1,10 @@
 const express = require ('express');
 const app = express();
 
+require (process.env.API_URL);
 
-
-app.get('/', (req, res) => {
+const api = process.env.
+app.get(api+'/products', (req, res) => {
   res.send('hello api')
 })
 app.listen(3000, () => {
